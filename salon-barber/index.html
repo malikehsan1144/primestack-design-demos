@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Cuts Barber Studio — Glasgow | Haircuts, Beard Trims &amp; Hot Towel Shaves</title>
+<meta name="description" content="Luxe Cuts Barber Studio in Glasgow. Sharp haircuts, beard sculpting and hot towel shaves. Walk-ins welcome.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',Arial,sans-serif;color:#ece7dd;background:#0c0a08;line-height:1.6;overflow-x:hidden}
+.demo-badge{background:linear-gradient(90deg,#F5B041,#ffcf7d);color:#0A1828;text-align:center;font-size:13px;font-weight:800;padding:9px;letter-spacing:.5px;position:relative;z-index:10}
+header{position:sticky;top:0;z-index:9;background:rgba(12,10,8,.92);backdrop-filter:blur(8px);padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-bottom:1px solid #2a241c}
+.logo{font-family:'Playfair Display',serif;font-size:28px;letter-spacing:2px}.logo span{color:#F5B041}
+nav a{color:#ece7dd;text-decoration:none;margin-left:24px;font-size:15px;font-weight:600}
+nav a:hover{color:#F5B041}
+.hero{position:relative;padding:110px 5% 90px;text-align:center;background:radial-gradient(ellipse at 30% 20%,#3a2c12 0%,transparent 55%),radial-gradient(ellipse at 80% 90%,#1e3a52 0%,transparent 50%),#0c0a08;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 26px,rgba(245,176,65,.05) 26px 27px);pointer-events:none}
+.hero .eyebrow{display:inline-block;border:1px solid #F5B041;color:#F5B041;padding:6px 18px;border-radius:30px;font-size:13px;letter-spacing:2px;font-weight:700;animation:fadeUp .7s ease both}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,76px);line-height:1.05;max-width:900px;margin:22px auto 18px;animation:fadeUp .7s .1s ease both}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#F5B041,#ffe1a3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;opacity:.85;max-width:620px;margin:0 auto 32px;animation:fadeUp .7s .2s ease both}
+.btn{display:inline-block;background:linear-gradient(90deg,#F5B041,#ffb84d);color:#0c0a08;text-decoration:none;font-weight:800;padding:16px 34px;border-radius:40px;box-shadow:0 10px 30px rgba(245,176,65,.35);transition:transform .2s,box-shadow .2s;animation:fadeUp .7s .3s ease both}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(245,176,65,.45)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.marquee{overflow:hidden;background:#F5B041;color:#0c0a08;font-weight:800;letter-spacing:2px;padding:12px 0;white-space:nowrap}
+.marquee span{display:inline-block;animation:scroll 22s linear infinite;padding-right:40px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:80px 5%;max-width:1150px;margin:0 auto}
+h2{font-family:'Playfair Display',serif;text-align:center;font-size:clamp(30px,4vw,44px);margin-bottom:10px}
+.sub{text-align:center;color:#a89f8d;margin-bottom:44px;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:linear-gradient(180deg,#1a1610,#12100c);border:1px solid #2e2718;border-radius:16px;padding:32px 26px;text-align:center;transition:transform .25s,border-color .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);border-color:#F5B041}
+.card:after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#F5B041,transparent)}
+.card h3{font-family:'Playfair Display',serif;font-size:23px;margin-bottom:6px}
+.card .price{color:#F5B041;font-weight:800;font-size:26px;margin:12px 0}
+.card p{color:#a89f8d;font-size:15px}
+.card .tag{display:inline-block;background:rgba(245,176,65,.15);color:#F5B041;font-size:12px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center;background:#16120d;border:1px solid #2e2718;border-radius:16px;padding:36px 20px}
+.stats b{font-family:'Playfair Display',serif;font-size:38px;color:#F5B041;display:block}
+.stats span{color:#a89f8d;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tile{height:170px;border-radius:14px;display:flex;align-items:flex-end;padding:18px;font-weight:700;font-size:18px;transition:transform .25s}
+.tile:hover{transform:scale(1.03)}
+.t1{background:linear-gradient(135deg,#3a2c12,#0c0a08)}
+.t2{background:linear-gradient(135deg,#1e3a52,#0c0a08)}
+.t3{background:linear-gradient(135deg,#4a2c14,#0c0a08)}
+.t4{background:linear-gradient(135deg,#243b1e,#0c0a08)}
+.hours{text-align:center}
+.hours table{margin:22px auto;border-collapse:collapse}
+.hours td{padding:10px 26px;border-bottom:1px solid #2e2718;color:#cfc6b4}
+.contact{text-align:center;background:linear-gradient(135deg,#1a1610,#0c0a08);border:1px solid #2e2718;border-radius:20px}
+.contact a{color:#F5B041}
+footer{text-align:center;padding:26px;color:#7d7466;font-size:13px}
+@media(max-width:600px){nav a{margin-left:12px}}
+</style>
+</head>
+<body>
+<div class="demo-badge">DESIGN DEMO &mdash; Concept sample by PrimeStack Services. All content on this page is sample content, not a real business.</div>
+<header>
+<div class="logo">LUXE <span>CUTS</span></div>
+<nav><a href="#services">Services</a><a href="#gallery">Styles</a><a href="#hours">Hours</a><a href="#contact">Book Now</a></nav>
+</header>
+<section class="hero">
+<span class="eyebrow">★ GLASGOW'S FINEST BARBER STUDIO</span>
+<h1>Walk In Ordinary.<br><em>Walk Out Unmistakable.</em></h1>
+<p>Precision cuts, sculpted beards and old-school hot towel shaves — on time, every time, in a studio built for men who notice the details.</p>
+<a class="btn" href="#contact">Book Your Chair →</a>
+</section>
+<div class="marquee"><span>HAIRCUTS ✦ BEARD SCULPTING ✦ HOT TOWEL SHAVES ✦ WALK-INS WELCOME ✦ HAIRCUTS ✦ BEARD SCULPTING ✦ HOT TOWEL SHAVES ✦ WALK-INS WELCOME ✦&nbsp;</span><span>HAIRCUTS ✦ BEARD SCULPTING ✦ HOT TOWEL SHAVES ✦ WALK-INS WELCOME ✦ HAIRCUTS ✦ BEARD SCULPTING ✦ HOT TOWEL SHAVES ✦ WALK-INS WELCOME ✦&nbsp;</span></div>
+<section id="services">
+<h2>Services &amp; Prices</h2>
+<p class="sub">No surprises. The price you see is the price you pay.</p>
+<div class="cards">
+<div class="card"><span class="tag">MOST BOOKED</span><h3>Signature Haircut</h3><div class="price">£25</div><p>Consultation, precision cut, hot lather neckline and styling finish. 45 minutes.</p></div>
+<div class="card"><h3>Beard Sculpt &amp; Detail</h3><div class="price">£18</div><p>Shape, line-up and beard oil finish for a beard that looks kept, not kept waiting.</p></div>
+<div class="card"><h3>Hot Towel Shave</h3><div class="price">£28</div><p>Traditional straight-razor shave with hot towels and cooling balm. 40 minutes.</p></div>
+<div class="card"><span class="tag">BEST VALUE</span><h3>Cut + Beard Combo</h3><div class="price">£38</div><p>The full reset: signature cut plus beard sculpt in one sitting. 60 minutes.</p></div>
+</div>
+</section>
+<section>
+<div class="stats">
+<div><b>4.9★</b><span>Average client rating (sample)</span></div>
+<div><b>1,200+</b><span>Cuts delivered (sample)</span></div>
+<div><b>0 min</b><span>Average wait past booking (sample)</span></div>
+<div><b>7 days</b><span>Open every week</span></div>
+</div>
+</section>
+<section id="gallery">
+<h2>Fresh From the Chair</h2>
+<p class="sub">The styles walking out of the studio this week.</p>
+<div class="gallery">
+<div class="tile t1">Classic Taper</div>
+<div class="tile t2">Skin Fade</div>
+<div class="tile t3">Textured Crop</div>
+<div class="tile t4">Beard &amp; Line-Up</div>
+</div>
+</section>
+<section class="hours" id="hours">
+<h2>Opening Hours</h2>
+<table>
+<tr><td>Monday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Sunday</td><td>10:00 AM – 4:00 PM</td></tr>
+</table>
+</section>
+<section class="contact" id="contact">
+<h2>Book Your Chair</h2>
+<p style="margin-top:14px;color:#cfc6b4">Same-day slots often available. Call or message us.<br>
+Phone: <a href="tel:+441234567890">01234 567890</a> &nbsp;|&nbsp; Email: <a href="mailto:hello@luxecuts-demo.example">hello@luxecuts-demo.example</a><br>
+123 Demo Street, Glasgow</p>
+</section>
+<footer>© 2026 Luxe Cuts Barber Studio (design demo). Concept website designed by PrimeStack Services. All names, prices and details on this page are sample content.</footer>
+</body>
+</html>
