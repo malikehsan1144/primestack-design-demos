@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean &amp; Bloom Coffee House — Glasgow | Specialty Coffee &amp; Fresh Bakes</title>
+<meta name="description" content="Bean & Bloom Coffee House in Glasgow. Small-batch specialty coffee, fresh pastries baked daily, and a calm corner to work or meet.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',Arial,sans-serif;color:#2b2118;background:#fdf8f2;line-height:1.6;overflow-x:hidden}
+.demo-badge{background:linear-gradient(90deg,#F5B041,#ffcf7d);color:#0A1828;text-align:center;font-size:13px;font-weight:800;padding:9px;letter-spacing:.5px;position:relative;z-index:10}
+header{position:sticky;top:0;z-index:9;background:rgba(253,248,242,.92);backdrop-filter:blur(8px);padding:16px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-bottom:1px solid #ece0d3}
+.logo{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:#3b2314}.logo span{color:#c47b3f}
+nav a{color:#3b2314;text-decoration:none;margin-left:24px;font-size:15px;font-weight:600}
+nav a:hover{color:#c47b3f}
+.hero{position:relative;padding:110px 5% 90px;text-align:center;overflow:hidden;background:radial-gradient(circle at 85% 15%,#f6ddc0 0%,transparent 45%),radial-gradient(circle at 10% 90%,#f3e2c8 0%,transparent 40%),#fdf8f2}
+.hero .eyebrow{display:inline-block;background:#3b2314;color:#fdf8f2;padding:7px 20px;border-radius:30px;font-size:13px;letter-spacing:2px;font-weight:700;animation:fadeUp .7s ease both}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(42px,7vw,74px);line-height:1.05;max-width:860px;margin:22px auto 18px;color:#3b2314;animation:fadeUp .7s .1s ease both}
+.hero h1 em{font-style:italic;color:#c47b3f}
+.hero p{font-size:19px;color:#6b5a4a;max-width:600px;margin:0 auto 32px;animation:fadeUp .7s .2s ease both}
+.btn{display:inline-block;background:#3b2314;color:#fdf8f2;text-decoration:none;font-weight:800;padding:16px 34px;border-radius:40px;box-shadow:0 12px 28px rgba(59,35,20,.3);transition:transform .2s;animation:fadeUp .7s .3s ease both}
+.btn:hover{transform:translateY(-3px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5;animation:floaty 6s ease-in-out infinite}
+.b1{width:180px;height:180px;background:#e8c39a;top:60px;right:8%}
+.b2{width:120px;height:120px;background:#d9b48a;bottom:40px;left:6%;animation-delay:2s}
+section{padding:80px 5%;max-width:1150px;margin:0 auto}
+h2{font-family:'Fraunces',serif;text-align:center;font-size:clamp(30px,4vw,44px);margin-bottom:10px;color:#3b2314}
+.sub{text-align:center;color:#6b5a4a;margin-bottom:44px;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border:1px solid #ece0d3;border-radius:20px;padding:30px 26px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(59,35,20,.12)}
+.card .icon{font-size:34px;margin-bottom:10px}
+.card h3{font-family:'Fraunces',serif;font-size:22px;color:#3b2314}
+.card .price{color:#c47b3f;font-weight:800;font-size:22px;margin:8px 0}
+.card p{color:#6b5a4a;font-size:15px}
+.spotlight{background:linear-gradient(135deg,#3b2314,#6b4226);color:#fdf8f2;border-radius:24px;padding:44px 8%;display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
+.spotlight h3{font-family:'Fraunces',serif;font-size:32px;margin-bottom:8px}
+.spotlight p{opacity:.9;max-width:520px}
+.spotlight .price-tag{background:#e8a87c;color:#3b2314;font-weight:800;font-size:22px;padding:14px 24px;border-radius:14px;transform:rotate(-2deg)}
+.why ul{list-style:none;max-width:700px;margin:0 auto;font-size:17px}
+.why li{padding:12px 0;border-bottom:1px solid #ece0d3}.why li:before{content:"☕ ";color:#c47b3f}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.quote{background:#fff;border:1px solid #ece0d3;border-left:5px solid #c47b3f;border-radius:12px;padding:26px;font-style:italic;color:#4a3a2c}
+.quote b{display:block;margin-top:12px;font-style:normal;color:#3b2314}
+.hours{text-align:center}
+.hours table{margin:22px auto;border-collapse:collapse}
+.hours td{padding:10px 26px;border-bottom:1px solid #ece0d3}
+.contact{text-align:center;background:#3b2314;color:#fdf8f2;border-radius:24px}
+.contact a{color:#e8a87c}
+footer{text-align:center;padding:26px;color:#9a887a;font-size:13px}
+@media(max-width:600px){nav a{margin-left:12px}}
+</style>
+</head>
+<body>
+<div class="demo-badge">DESIGN DEMO &mdash; Concept sample by PrimeStack Services. All content on this page is sample content, not a real business.</div>
+<header>
+<div class="logo">BEAN <span>&amp;</span> BLOOM</div>
+<nav><a href="#menu">Menu</a><a href="#brew">Today's Brew</a><a href="#hours">Hours</a><a href="#contact">Find Us</a></nav>
+</header>
+<section class="hero">
+<div class="blob b1"></div><div class="blob b2"></div>
+<span class="eyebrow">SMALL-BATCH · ROASTED WEEKLY · GLASGOW</span>
+<h1>Slow Mornings, <em>Beautifully</em> Brewed.</h1>
+<p>Specialty coffee, pastries out of the oven every morning, and a corner of the city that feels like it belongs to you.</p>
+<a class="btn" href="#menu">Explore the Menu →</a>
+</section>
+<section id="menu">
+<h2>House Favourites</h2>
+<p class="sub">Made fresh daily — when it's gone, it's gone.</p>
+<div class="cards">
+<div class="card"><div class="icon">☕</div><h3>Signature Flat White</h3><div class="price">£3.40</div><p>Double shot, velvety milk, single-origin beans roasted in small weekly batches.</p></div>
+<div class="card"><div class="icon">🥐</div><h3>Warm Cinnamon Bun</h3><div class="price">£3.80</div><p>Baked at 7 AM, still warm by 9. The reason half the street comes in.</p></div>
+<div class="card"><div class="icon">🥑</div><h3>Avocado Toast</h3><div class="price">£7.50</div><p>Sourdough, smashed avocado, chilli flakes and a squeeze of lemon.</p></div>
+<div class="card"><div class="icon">🫙</div><h3>Filter of the Day</h3><div class="price">£2.90</div><p>A rotating single origin, brewed fresh all day. Ask the bar what's on.</p></div>
+</div>
+</section>
+<section id="brew">
+<div class="spotlight">
+<div><h3>Today's Brew: Ethiopia Yirgacheffe</h3><p>Bright, floral, with notes of bergamot and stone fruit. Poured slow, served with a smile — and a cinnamon bun if you're quick.</p></div>
+<div class="price-tag">£2.90 / cup</div>
+</div>
+</section>
+<section>
+<h2>Why People Stay</h2>
+<div class="why"><ul>
+<li>Beans from small roasters, never bulk blends</li>
+<li>Free fast Wi-Fi and plenty of plug sockets</li>
+<li>Dog-friendly — water bowls and treats at the door</li>
+<li>Takeaway cups that are fully compostable</li>
+</ul></div>
+</section>
+<section>
+<h2>Kind Words (Sample)</h2>
+<p class="sub">What regulars would say — sample quotes for this demo design.</p>
+<div class="quotes">
+<div class="quote">"The flat white here ruined every other coffee for me. I plan my mornings around it now."<b>— Sample regular</b></div>
+<div class="quote">"Warm bun, good Wi-Fi, nobody rushes you. My favourite working spot in the city."<b>— Sample regular</b></div>
+<div class="quote">"You can taste that the beans are fresh. Nothing chain-like about this place."<b>— Sample regular</b></div>
+</div>
+</section>
+<section class="hours" id="hours">
+<h2>Opening Hours</h2>
+<table>
+<tr><td>Monday – Friday</td><td>7:30 AM – 6:00 PM</td></tr>
+<tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Sunday</td><td>9:00 AM – 4:00 PM</td></tr>
+</table>
+</section>
+<section class="contact" id="contact">
+<h2>Find Us</h2>
+<p style="margin-top:14px">123 Demo Street, Glasgow<br>
+Phone: <a href="tel:+441234567891">01234 567891</a> &nbsp;|&nbsp; Email: <a href="mailto:hello@beanbloom-demo.example">hello@beanbloom-demo.example</a></p>
+</section>
+<footer>© 2026 Bean &amp; Bloom Coffee House (design demo). Concept website designed by PrimeStack Services. All names, prices and details on this page are sample content.</footer>
+</body>
+</html>
